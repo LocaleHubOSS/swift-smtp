@@ -1,21 +1,29 @@
-# Swift-SMTP
+# SwiftSMTP
 
-![Swift-SMTP bird](https://github.com/Kitura/Swift-SMTP/blob/master/Assets/swift-smtp-bird.png?raw=true)
+![SwiftSMTP bird](https://github.com/Kitura/Swift-SMTP/blob/master/Assets/swift-smtp-bird.png?raw=true)
 
-Swift SMTP client.
+> [!NOTE]
+> This repository is a fork of [Kitura's Swift-SMTP](https://github.com/Kitura/Swift-SMTP).
+>
+> Since the project doesn't appear to be maintained anymore, this fork will contain bug fixes and features needed for the development of LocaleHub.
+> 
+> While we don't aim to revive the project, we will welcome any help from external contributors, and will reply to opened issues in pull requests in the best possible delays.
 
-![Build Status](https://travis-ci.org/Kitura/Swift-SMTP.svg?branch=master)
-![macOS](https://img.shields.io/badge/os-macOS-green.svg?style=flat)
-![Linux](https://img.shields.io/badge/os-linux-green.svg?style=flat)
-![Apache 2](https://img.shields.io/badge/license-Apache2-blue.svg?style=flat)
+![macOS](https://img.shields.io/badge/os-macOS-green.svg?style=flat-square)
+![Linux](https://img.shields.io/badge/os-linux-green.svg?style=flat-square)
+[![Apache 2 license](https://img.shields.io/badge/license-Apache2-blue.svg?style=flat-square)](https://raw.githubusercontent.com/locale-hub/SwiftSMTP/master/LICENSE.txt)
+[![Swift 5.2 and later](https://img.shields.io/badge/Swift-5.2-orange.svg?style=flat-square)](https://github.com/apple/swift)
+[![Swift Package Manager compatible](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square)](https://swift.org/package-manager/)
 
 ## Features
 
+Swift client for the SMTP protocol:
 - Connect securely through SSL/TLS when needed
 - Authenticate with CRAM-MD5, LOGIN, PLAIN, or XOAUTH2
 - Send emails with local file, HTML, and raw data attachments
 - Add custom headers
-- [Documentation](https://kitura.github.io/Swift-SMTP/)
+ 
+[Documentation](https://kitura.github.io/Swift-SMTP/)
 
 ## Swift Version
 
@@ -23,35 +31,17 @@ macOS & Linux: `Swift 5.2` or above.
 
 ## Installation
 
-You can add `SwiftSMTP` to your project using [Swift Package Manager](https://swift.org/package-manager/). If your project does not have a `Package.swift` file, create one by running `swift package init` in the root directory of your project. Then open `Package.swift` and add `SwiftSMTP` as a dependency. Be sure to add it to your desired targets as well:
+To install SwiftSMTP you can follow the [tutorial published by Apple](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app)
+using the URL for the SwiftSMTP repo with the current version:
+
+1. In Xcode, select “File” → “Add Packages...”
+1. Enter `https://github.com/locale-hub/SwiftSMTP.git`
+
+or you can add the following dependency to your `Package.swift`:
 
 ```swift
-// swift-tools-version:4.0
-
-import PackageDescription
-
-let package = Package(
-    name: "MyProject",
-    products: [
-        .library(
-            name: "MyProject",
-            targets: ["MyProject"]),
-    ],
-    dependencies: [
-        .package(url: "https://github.com/Kitura/Swift-SMTP", .upToNextMinor(from: "5.1.0")),    // add the dependency
-    ],
-    targets: [
-        .target(
-            name: "MyProject",
-            dependencies: ["SwiftSMTP"]),                                                           // add targets
-        .testTarget(                                                                                // note "SwiftSMTP" (NO HYPHEN)
-            name: "MyProjectTests",
-            dependencies: ["MyProject"]),
-    ]
-)
+.package(url: "https://github.com/locale-hub/SwiftSMTP.git", from: "6.0.1")
 ```
-
-After adding the dependency and saving, run `swift package generate-xcodeproj` in the root directory of your project. This will fetch dependencies and create an Xcode project which you can open and begin editing.
 
 ## Migration Guide
 
