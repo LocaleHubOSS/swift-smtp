@@ -200,13 +200,11 @@ extension DataSender {
 private extension DataSender {
     // Write `text` to the socket.
     func send(_ text: String) throws {
-        print("SEND: \(text)")
         try socket.write(text)
     }
 
     // Write `data` to the socket.
     func send(_ data: Data) throws {
-        print("SEND: data \(data.count) bytes")
         try socket.write(data)
     }
 }
