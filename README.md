@@ -11,7 +11,7 @@
 
 ![macOS](https://img.shields.io/badge/os-macOS-green.svg?style=flat-square)
 ![Linux](https://img.shields.io/badge/os-linux-green.svg?style=flat-square)
-[![Apache 2 license](https://img.shields.io/badge/license-Apache2-blue.svg?style=flat-square)](https://raw.githubusercontent.com/locale-hub/SwiftSMTP/master/LICENSE.txt)
+[![Apache 2 license](https://img.shields.io/badge/license-Apache2-blue.svg?style=flat-square)](https://raw.githubusercontent.com/LocaleHubOSS/swift-smtp/master/LICENSE.txt)
 [![Swift 5.2 and later](https://img.shields.io/badge/Swift-5.2-orange.svg?style=flat-square)](https://github.com/apple/swift)
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square)](https://swift.org/package-manager/)
 
@@ -35,12 +35,12 @@ To install SwiftSMTP you can follow the [tutorial published by Apple](https://de
 using the URL for the SwiftSMTP repo with the current version:
 
 1. In Xcode, select “File” → “Add Packages...”
-1. Enter `https://github.com/locale-hub/SwiftSMTP.git`
+1. Enter `https://github.com/LocaleHubOSS/swift-smtp.git`
 
 or you can add the following dependency to your `Package.swift`:
 
 ```swift
-.package(url: "https://github.com/locale-hub/SwiftSMTP.git", from: "6.0.1")
+.package(url: "https://github.com/LocaleHubOSS/swift-smtp.git", from: "6.0.1")
 ```
 
 ## Migration Guide
